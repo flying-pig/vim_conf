@@ -25,5 +25,7 @@ if you complie llvm yourself, can use
 make -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON 
 -DUSE_SYSTEM_BOOST=ON . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 
+cmake -G "Unix Makefiles" -DUSE_SYSTEM_BOOST=ON -DPATH_TO_LLVM_ROOT=/usr/local/llvm . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+
 make ycm_support_libs
 
