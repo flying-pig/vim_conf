@@ -41,7 +41,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'elzr/vim-json'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'mbbill/code_complete'
+"Plugin 'mbbill/code_complete'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
