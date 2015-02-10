@@ -19,7 +19,7 @@ yum install python-devel
 
 Note: install others you need
 
-if you complie llvm yourself, can use
+if you complie llvm yourself, can use    
 `./configure --prefix=/usr/local/llvm --enable-optimized --enable-targets=host-only`
 
 `cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON 
