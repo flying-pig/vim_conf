@@ -22,7 +22,7 @@ Note: install others you need
 if you complie llvm yourself, can use
 ./configure --prefix=/usr/local/llvm --enable-optimized --enable-targets=host-only
 
-make -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON 
+cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON 
 -DUSE_SYSTEM_BOOST=ON . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 
 cmake -G "Unix Makefiles" -DUSE_SYSTEM_BOOST=ON -DPATH_TO_LLVM_ROOT=/usr/local/llvm . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
