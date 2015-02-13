@@ -3,7 +3,7 @@ vim_conf
 my vim configure
 
 
-use vundle manage vim plugins
+use vundle manage vim plugins    
 ```git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 YouCompleteMe Install https://github.com/Valloric/YouCompleteMe
 
