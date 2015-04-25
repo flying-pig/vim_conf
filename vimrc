@@ -357,4 +357,4 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " Syntastic settings
 let g:syntastic_check_on_open = 1
 let g:syntastic_c_checkers = ['clang_checker', 'gcc']
-let g:syntastic_cpp_checkers = ['clang_checker', 'gcc']
+let g:syntastic_cpp_checkers = ['clang_checker', 'g++']
