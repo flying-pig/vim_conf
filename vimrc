@@ -244,6 +244,7 @@ nmap tb :TagbarToggle<CR>
 " NERDTREE
 nnoremap <silent> <Leader>n  :NERDTreeToggle<CR>
 let g:NERDTree_title='NERD Tree'
+let NERDTreeIgnore = ['.*\.o$','.*\.ko$','.*\.gz$','cscope\.*']
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,big5,euc-jp,euc-kr,latin1
