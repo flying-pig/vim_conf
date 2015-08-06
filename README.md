@@ -14,7 +14,7 @@ yum install cmake
 yum install clang
 
 CentOS must first install epel [epel zh](https://fedoraproject.org/wiki/EPEL/zh-cn), download [epel release repository](http://mirrors.opencas.cn/epel/7/x86_64/e/epel-release-7-5.noarch.rpm)
-rpm -i epel-release-7-5.noarch.rpm
+`rpm -i epel-release-7-5.noarch.rpm`
 
 yum install boost-devel
 
