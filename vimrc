@@ -244,7 +244,7 @@ nmap tb :TagbarToggle<CR>
 " NERDTREE
 nnoremap <silent> <Leader>n  :NERDTreeToggle<CR>
 let g:NERDTree_title='NERD Tree'
-let NERDTreeIgnore = ['.*\.o$','.*\.ko$','.*\.gz$','cscope\.*']
+let NERDTreeIgnore = ['.*\.o$','.*\.ko$','.*\.gz$','.*\.so$','.*\.so\.*','.*\.a$','cscope\.*','.*_test','.*_bench']
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,big5,euc-jp,euc-kr,latin1
@@ -318,14 +318,14 @@ inoremap <expr> <PageDown>	pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDow
 " YouCompleteMe settings
 " let g:syntastic_clang_check_config_file = (string; default: '.syntastic_clang_check_config')
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" load .ycm_extra_conf.py notification on | off
+let g:ycm_confirm_extra_conf=0
 
 " default tag s-tab Conflict with autocomplete
 "let g:ycm_key_list_select_completion=['<c-n>']
 "let g:ycm_key_list_select_completion = ['<Down>']
 "let g:ycm_key_list_previous_completion=['<c-p>']
 "let g:ycm_key_list_previous_completion = ['<Up>']
-" load .ycm_extra_conf.py notification on | off
-"let g:ycm_confirm_extra_conf=0
 
 " use ctags flags
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -357,5 +357,6 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " Syntastic settings
 let g:syntastic_check_on_open = 1
-let g:syntastic_c_checkers = ['clang_checker', 'gcc']
-let g:syntastic_cpp_checkers = ['clang_checker', 'g++']
+let g:syntastic_c_checkers = ['clang_check', 'gcc']
+" let g:syntastic_cpp_checkers = ['clang_check', 'g++']
+let g:syntastic_cpp_checkers = ['g++']
