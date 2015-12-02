@@ -34,6 +34,5 @@ my vim configure
 
 * Add C-family language and Golang semantic support 
   ```
-  ./install.py --clang-completer --gocode-completer
-  --system-libclang --system-boost
+  ./install.py --clang-completer --gocode-completer --system-libclang --system-boost
   ```
