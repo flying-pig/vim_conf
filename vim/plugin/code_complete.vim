@@ -250,7 +250,7 @@ let g:template['c']['in'] = "#include \"\"\<left>"
 let g:template['c']['is'] = "#include <>\<left>"
 let g:template['c']['ff'] = "#ifndef \<c-r>=GetFileName()\<cr>_\<CR>#define \<c-r>=GetFileName()\<cr>_".
             \repeat("\<cr>",5)."#endif  // \<c-r>=GetFileName()\<cr>_".repeat("\<up>",3)
-let g:template['c']['for'] = "for (".g:rs."...".g:re." ; ".g:rs."...".g:re." ; ".g:rs."...".g:re.") {\<cr>".
+let g:template['c']['for'] = "for (".g:rs."...".g:re."; ".g:rs."...".g:re."; ".g:rs."...".g:re.") {\<cr>".
             \g:rs."...".g:re."\<cr>}\<cr>"
 let g:template['c']['main'] = "int main(int argc, char \*argv\[\])\<cr>{\<cr>".g:rs."...".g:re."\<cr>}"
 let g:template['c']['switch'] = "switch (".g:rs."...".g:re.") {\<cr>case ".g:rs."...".g:re." :\<cr>break;\<cr>case ".
@@ -268,6 +268,22 @@ let g:template['cpp'] = g:template['c']
 " common templates
 let g:template['_'] = {}
 let g:template['_']['xt'] = "\<c-r>=strftime(\"%Y-%m-%d %H:%M:%S\")\<cr>"
+
+" ---------------------------------------------
+"  Go templates
+let g:template['go'] = {}
+let g:template['go']['main'] = "func main() {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['if'] = "if ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['ife'] = "if ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>} else {\<cr>".g:rs."...".
+            \g:re."\<cr>}"
+let g:template['go']['el'] = "else {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['eli'] = "else if ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['for'] = "for ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['select'] = "select {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['switch'] = "switch ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['go']['im'] = "import \"\"\<left>"
+let g:template['go']['is'] = "import ()\<left>"
+let g:template['go']['func'] = "func ".g:rs."...".g:re." {\<cr>".g:rs."...".g:re."\<cr>}"
 
 " ---------------------------------------------
 " load user defined snippets
