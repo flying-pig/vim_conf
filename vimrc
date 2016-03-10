@@ -339,12 +339,15 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 "inoremap <leader><leader> <C-x><C-o>
 
 " Syntastic settings
-"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 "let g:syntastic_c_checkers = ['clang_check', 'gcc']
 "let g:syntastic_cpp_checkers = ['clang_check', 'g++']
 "let g:syntastic_cpp_checkers = ['g++']
 "let g:syntastic_cpp_compiler = 'clang++'
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+nnoremap <leader>ck :SyntasticCheck<CR>
+nnoremap <leader>cr :SyntasticReset<CR>
 
 " vim-javascript
 "let g:javascript_enable_domhtmlcss = 1
@@ -357,7 +360,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_autosave = 1
 "let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " ListToggle
 let g:lt_location_list_toggle_map = '<leader>l'
