@@ -28,6 +28,8 @@ Plugin 'Valloric/ListToggle'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,6 +81,7 @@ set smartindent
 
 set backupdir=~/.vim/backup
 set backupext=.bak
+set directory=~/.vim/swap
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -148,10 +151,10 @@ endif
 
 set cindent
 "set ic
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+"set expandtab
 "set cursorline
 set tags+=tags
 set tags+=/usr/include/tags
@@ -205,8 +208,8 @@ function! NERDTree_IsValid()
     return 1
 endfunction
 
-nmap wm :WMToggle<CR>
-nmap <silent> mt :if IsWinManagerVisible() <BAR> WMToggle<CR> <BAR> else <BAR> WMToggle<CR>:q<CR> endif <CR> 
+"nmap wm :WMToggle<CR>
+"nmap <silent> mt :if IsWinManagerVisible() <BAR> WMToggle<CR> <BAR> else <BAR> WMToggle<CR>:q<CR> endif <CR> 
 
 nmap co :copen<CR>
 nmap cc :cclose<CR>
@@ -247,25 +250,28 @@ set runtimepath^=~/.vim/bundle/cvim
 " airline settings
 set laststatus=2
 let g:airline_section_warning=''
-let g:airline_theme="powerlineish"
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-" let g:airline_left_sep = '»'
+" let g:airline_theme="powerlineish"
+let g:airline_theme="solarized"
+" let g:airline_powerline_fonts = 1
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
+" 
+" " unicode symbols
+" " let g:airline_left_sep = '»'
 " let g:airline_left_sep = '▶'
-" let g:airline_right_sep = '«'
+" " let g:airline_right_sep = '«'
 " let g:airline_right_sep = '◀'
-" let g:airline_symbols.linenr = '␊'
+" " let g:airline_symbols.linenr = '␊'
 " let g:airline_symbols.linenr = '␤'
-" let g:airline_symbols.linenr = '¶'
+" " let g:airline_symbols.linenr = '¶'
 " let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
+" " let g:airline_symbols.paste = 'ρ'
 " let g:airline_symbols.paste = 'Þ'
-" let g:airline_symbols.paste = '∥'
+" " let g:airline_symbols.paste = '∥'
 " let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline_symbols.crypt = '🔒'
+" let g:airline_symbols.notexists = '∄'
 
 " powerline symbols
 " let g:airline_left_sep = ''
@@ -277,13 +283,13 @@ endif
 " let g:airline_symbols.linenr = ''
 
 " old vim-powerline symbols
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+" let g:airline_left_sep = '⮀'
+" let g:airline_left_alt_sep = '⮁'
+" let g:airline_right_sep = '⮂'
+" let g:airline_right_alt_sep = '⮃'
+" let g:airline_symbols.branch = '⭠'
+" let g:airline_symbols.readonly = '⭤'
+" let g:airline_symbols.linenr = '⭡'
 
 " vim-markdown settings
 "let g:vim_markdown_folding_disabled=1
