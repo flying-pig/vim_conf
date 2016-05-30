@@ -20,6 +20,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
@@ -196,21 +198,6 @@ function! ClosePair(char)
   endif
 endfunction
 
-" winManager setting
-" let g:winManagerWindowLayout = "FileExplorer|TagList"
-" let g:winManagerWindowLayout = "NERDTree|TagList"
-let g:winManagerWidth = 30
-function! NERDTree_Start()
-    exe 'NERDTree'
-endfunction
-
-function! NERDTree_IsValid()
-    return 1
-endfunction
-
-"nmap wm :WMToggle<CR>
-"nmap <silent> mt :if IsWinManagerVisible() <BAR> WMToggle<CR> <BAR> else <BAR> WMToggle<CR>:q<CR> endif <CR> 
-
 nmap co :copen<CR>
 nmap cc :cclose<CR>
 nmap cn :cnext<CR>
@@ -236,6 +223,23 @@ nmap tb :TagbarToggle<CR>
 nnoremap <silent> <Leader>n  :NERDTreeToggle<CR>
 let g:NERDTree_title='NERD Tree'
 let NERDTreeIgnore = ['.*\.o$','.*\.ko$','.*\.gz$','.*\.so$','.*\.so\.*','.*\.a$','cscope\.*','.*_test','.*_bench']
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+"let NERDTreeShowHidden=1
+"let NERDTreeWinSize=31
+let NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gbk,gb18030,big5,euc-jp,euc-kr,latin1
